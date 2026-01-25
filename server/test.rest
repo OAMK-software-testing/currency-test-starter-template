@@ -1,0 +1,9 @@
+### Convert Amount
+POST http://localhost:3000/api/convert/amount
+Content-Type: application/json
+
+{
+  "amount": 100,
+  "from": "SEK",
+  "to": "EUR"
+}

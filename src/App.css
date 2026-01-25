@@ -1,0 +1,51 @@
+div#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+h1 {
+  font-size: 2em;
+  color: #2b12cc;
+}
+
+form div {
+  padding: 0.5em 0;
+}
+
+form label {
+  display: inline-block;
+  width: 3em;
+}
+
+button {
+  background-color: #2b12cc;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(43, 18, 204, 0.2);
+}
+
+button:hover {
+  background-color: #1f0a99;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(43, 18, 204, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(43, 18, 204, 0.2);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
