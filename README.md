@@ -8,7 +8,7 @@ This is an example project demonstrating automated testing. App is a simple curr
 Project contains .env files, since there are no sensitive data. If Node or React needs to reconfigured, edit .env files. There are two, one for the front end on root folder and a second one under the server folder. By default, backend is running on http://localhost:3000 and frontend on http://localhost/5173. 
 
 Install node modules for both backend and frontend. Run `npm i` under server and root for that.
-You may also need to run `npm i express cors dotenv`
+You may also need to run `npm i express cors dotenv` on server folder
 
 ## Running app
 
