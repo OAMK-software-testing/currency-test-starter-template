@@ -22,24 +22,24 @@ export const convertAmount = async(req: Request, res: Response): Promise<Respons
 
     // Validate that both currency codes are provided
     if (!fromCode || !toCode) {
-      return res.status(400).json({ error: 'Body parameters "from" and "to" are required.' });
+      res.status(400).json({ error: 'Body parameters "from" and "to" are required.' });
     }
 
     // Validate currency codes match ISO 4217 format (3 uppercase letters)
     if (!currencyCodePattern.test(fromCode) || !currencyCodePattern.test(toCode)) {
-      return res.status(400).json({ error: 'Currency codes must be 3-letter ISO abbreviations (e.g., USD, EUR).' });
+      res.status(400).json({ error: 'Currency codes must be 3-letter ISO abbreviations (e.g., USD, EUR).' });
     }
 
     // Parse and validate the conversion amount
     // Convert to number if provided as string, validate it's a finite number
     const parsedAmount = typeof amount === 'number' ? amount : Number(amount);
     if (!Number.isFinite(parsedAmount)) {
-      return res.status(400).json({ error: 'Amount must be a valid number.' });
+      res.status(400).json({ error: 'Amount must be a valid number.' });
     }
 
     // Validate that the amount is positive (must be greater than zero)
     if (parsedAmount <= 0) {
-      return res.status(400).json({ error: 'Amount must be greater than zero.' });
+      res.status(400).json({ error: 'Amount must be greater than zero.' });
     }
 
     // All validation passed, call the conversion service
